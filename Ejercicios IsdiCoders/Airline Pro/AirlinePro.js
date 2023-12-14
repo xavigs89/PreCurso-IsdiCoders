@@ -74,7 +74,7 @@ const flights = [
   
     const averageCost = flights.reduce((acc, flight) => acc + flight.cost, 0) / flights.length;
     console.log(`\nEl coste medio de los vuelos es de ${averageCost.toFixed(2)}€.`);
-  
+   
     const flightsWithLayovers = flights.filter((flight) => flight.layover);
     console.log(`\n${flightsWithLayovers.length} vuelos realizan escalas.`);
   
