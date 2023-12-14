@@ -32,7 +32,7 @@ const calculatorPro = () => {
             alert("Lo sentimos, el primer valor no es un número. Por favor, introduce un número válido.");
         }
     }
-
+    
     // Captura del segundo número ingresado por el usuario
     let input2 = prompt("Por favor, introduce el segundo número a calcular (si se deja en blanco, se calcula únicamente la raíz cuadrada): ");
     let valor2 = Number(input2);
@@ -43,38 +43,35 @@ const calculatorPro = () => {
         console.log(`La raíz cuadrada de ${valor1} es: ${Math.sqrt(valor1).toFixed(3)}`);
         return anotherOperation(); // Llama a la función para preguntar si se desea realizar otra operación
     } else {
-        // Si se ingresaron dos números válidos, realiza operaciones matemáticas
-        const calculator = (a, b) => {
-            // Realiza operaciones matemáticas básicas
-            const suma = a + b;
-            const resta = a - b;
-            const multiplicacion = a * b;
-            let division;
 
+        // Si se ingresaron dos números válidos, realiza operaciones matemáticas
+        function calculator(valor1, valor2) {
+            
+            // Realiza operaciones matemáticas básicas
+            const suma = valor1 + valor2;
+            const resta = valor1 - valor2;
+            const multiplicacion = valor1 * valor2;
+            let division;
+        
             // Verifica si el segundo número es cero para evitar división por cero
-            if (b === 0) {
+            if (valor2 === 0) {
                 division = "No se puede dividir entre 0";
             } else {
-                division = (a / b).toFixed(3); // Realiza la división y redondea el resultado a 3 decimales
+                division = (valor1 / valor2).toFixed(3); // Realiza la división y redondea el resultado a 3 decimales
             }
-
-            // Almacena los resultados en un array
-            const results = [];
-            results.push(suma.toFixed(3));
-            results.push(resta.toFixed(3));
-            results.push(multiplicacion.toFixed(3));
-            results.push(division);
-
-            // Devuelve un objeto con etiquetas de resultados para cada operación
-            return {
-                "El resultado para la suma es": `${a} + ${b} = ${results[0]}`,
-                "El resultado para la resta es": `${a} - ${b} = ${results[1]}`,
-                "El resultado para la multiplicación es": `${a} * ${b} = ${results[2]}`,
-                "El resultado para la división es": `${a} / ${b} = ${results[3]}`
-            };
+        
+            // Muestra los resultados en console.log con etiquetas
+        console.log("El resultado de la suma de " + valor1 + " y " + valor2 + " es: " + suma.toFixed(3));
+        console.log("El resultado de la resta de " + valor1 + " y " + valor2 + " es: " + resta.toFixed(3));
+        console.log("El resultado de la multiplicación de " + valor1 + " y " + valor2 + " es: " + multiplicacion.toFixed(3));
+        console.log("El resultado de la división de " + valor1 + " entre " + valor2 + " es: " + division);
         }
-        console.log(calculator(valor1, valor2)); // Muestra los resultados de las operaciones
-        return anotherOperation(); // Llama a la función para preguntar si se desea realizar otra operación
+        
+        // Llama a la función para mostrar los resultados de las operaciones
+        calculator(valor1, valor2);
+        
+        // Llama a la función para preguntar si se desea realizar otra operación
+        return anotherOperation();
     }
 }
 
@@ -85,7 +82,7 @@ const anotherOperation = () => {
     if (addOperation) {
         calculatorPro(); // Llama a la función principal para realizar otra operación
     } else {
-        alert("Gracias por utilizar la aplicación calculadora. Que tenga un buen día");
+        alert("Gracias por utilizar la aplicación calculadora. Que tengas un buen día");
     }
 };
 
