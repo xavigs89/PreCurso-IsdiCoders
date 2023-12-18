@@ -297,4 +297,31 @@ We could also add a paragraph to provide even more detail. Let’s see an exampl
 Using the <form> element in conjunction with the other elements listed above allows us to create sites that take into consideration the wants and needs of our users. 
 Take the opportunity to take what you’ve learned, and apply it!
 
-	
+
+
+									USER Y PASSWORD EDITARLO PARA MAXIMO DE LETRAS
+<form action="submission.html" method="GET">
+        <label for="username">Username:</label>
+        <br>
+        <input id="username" name="username" type="text" minlength="3" maxlength="15">
+        <br>
+        <label for="pw">Password:</label>
+        <br>
+        <input id="pw" name="pw" type="password" minlength="8" maxlength="15">
+        <br>
+        <input type="submit" value="Submit">
+</form>
+
+
+										PARA DECIR QUE PASSWORD SOLO TENGA LETRAS, NUMEROS ETC ETC
+	<form action="submission.html" method="GET">
+        	<label for="username">Username:</label>
+        	<br>
+			<input id="username" name="username" type="text" required minlength="3" maxlength="15" pattern="[a-zA-Z0-9]+">
+        	<br>
+        		<label for="pw">Password:</label>
+       		<br>
+			<input id="pw" name="pw" type="password" required minlength="8" maxlength="15">
+        	<br>
+        		<input type="submit" value="Submit">
+      </form>
