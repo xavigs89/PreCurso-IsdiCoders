@@ -1,1 +1,139 @@
 
+										                                                                    TABLAS
+
+En HTML, las etiquetas <tr> (table row) se utilizan para definir filas en una tabla. Las tablas en HTML se estructuran utilizando varias etiquetas, y <tr> es esencial para organizar la información en filas. 
+Cada fila de una tabla contiene celdas, definidas por: 
+	
+	1. La etiqueta <th>TEXTO</th> (table header) para encabezados de columna.
+		1.1. SI QUIERES PONERLO EN FORMATO COLUMNA, SE HACE ASI:
+			 <th scope="col">TEXTO</th>
+		1.2. SI QUIERES PONERLO EN FORMATO FILA, SE HACE ASI:
+			<th scope="row">Temperature</th>
+	
+	2. La etiqueta <td>TEXTO</td> (table data) para datos regulares.
+		
+			                                                                              EJEMPLO!!
+
+<table>
+  <tr>
+    <th>Encabezado 1</th>
+    <th>Encabezado 2</th>
+  </tr>
+  <tr>
+    <td>Dato 1</td>
+    <td>Dato 2</td>
+  </tr>
+  <tr>
+    <td>Dato 3</td>
+    <td>Dato 4</td>
+  </tr>
+</table>
+
+En este ejemplo:
+
+La primera <tr> contiene las etiquetas de encabezado <th>, que definen los encabezados de columna de la tabla.
+Las siguientes dos <tr> contienen datos representados por las etiquetas <td>. Cada <td> representa una celda en la fila.
+El uso de las etiquetas <tr> es fundamental para organizar la información en un formato tabular y facilitar la lectura y comprensión de los datos. 
+Las filas (<tr>) son parte integral de la estructura de la tabla en HTML y ayudan a definir la relación entre las celdas que se encuentran en la misma posición en diferentes filas.
+
+									                                                            EJEMPLO GLOBAL!!
+
+	<table>
+      <tr>
+        <th scope="col">Company Name</th>
+        <th scope="col">Number of Items to Ship</th>
+        <th scope="col">Next Action</th>
+      </tr>
+      <tr>
+        <td>Adam's Greenworks</td>
+        <td>14</td>
+        <td>Package Items</td>
+      </tr>
+      <tr>
+        <td>Davie's Burgers</td>
+        <td>2</td>
+        <td>Send Invoice</td>
+      </tr>
+      <tr>
+        <td>Baker's Bike Shop</td>
+        <td>3</td>
+        <td>Send Invoice</td>
+      </tr>
+      <tr>
+        <td>Miss Sally's Southern</td>
+        <td>4</td>
+        <td>Ship</td>
+      </tr>
+      <tr>
+        <td>Summit Resort Rentals</td>
+        <td>4</td>
+        <td>Ship</td>
+      </tr>
+      <tr>
+        <td>Strike Fitness</td>
+        <td>1</td>
+        <td>Enter Order</td>
+      </tr>
+    </table>
+
+
+									                                                  OTRO EJEMPLO MAS COMPLETO!
+	<table>
+    <thead>
+      <tr>
+        <th>Company Name</th>
+        <th>Number of Items to Ship</th>
+        <th>Next Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Adam's Greenworks</td>
+        <td>14</td>
+        <td>Package Items</td>
+      </tr>
+      <tr>
+        <td>Davie's Burgers</td>
+        <td>2</td>
+        <td>Send Invoice</td>
+      </tr>
+      <tr>
+        <td>Baker's Bike Shop</td>
+        <td>3</td>
+        <td>Send Invoice</td>
+      </tr>
+      <tr>
+        <td>Miss Sally's Southern</td>
+        <td>4</td>
+        <td>Ship</td>
+      </tr>
+      <tr>
+        <td>Summit Resort Rentals</td>
+        <td>4</td>
+        <td>Ship</td>
+      </tr>
+      <tr>
+        <td>Strike Fitness</td>
+        <td>1</td>
+        <td>Enter Order</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <td>Total</td>
+	<td>28</td>
+    </tfoot>
+  </table>
+
+
+
+The <table> element creates a table.
+- The <tr> element adds rows to a table.
+- To add data to a row, you can use the <td> element.
+- Table headings clarify the meaning of data. Headings are added with the <th> element.
+- Table data can span columns using the colspan attribute.
+- Table data can span rows using the rowspan attribute.
+- Tables can be split into three main sections: a head, a body, and a footer.
+- A table’s head is created with the <thead> element.
+- A table’s body is created with the <tbody> element.
+- A table’s footer is created with the <tfoot> element.
+- All the CSS properties you learned about in this course can be applied to tables and their data.
