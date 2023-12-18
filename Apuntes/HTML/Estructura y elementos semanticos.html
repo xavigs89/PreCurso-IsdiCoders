@@ -8,19 +8,110 @@ desarrolladores como para los navegadores y otros agentes que procesan la inform
 La introducción de etiquetas semánticas en HTML5 ha mejorado significativamente la capacidad de los desarrolladores para estructurar sus documentos web de manera más significativa. 
 Algunas de estas etiquetas semánticas incluyen:
 
+Estructura basica:  <header>, <nav> , <main> and <footer>
+
 1. <header>: Representa la cabecera de una sección o de un sitio web. Generalmente contiene elementos como logotipos, títulos y enlaces de navegación.
+                <header>
+                  <h1>Navigational Links</h1>
+                <nav>
+                  <ul>
+                      <li><a href="#home">Home</a></li>
+                      <li><a href="#posts">Posts</a></li>
+                      <li><a href="#contact">Contact</a></li>
+                  </ul>
+                </nav>
+              </header>
 
 2. <nav>: Se utiliza para definir una sección de navegación. Contiene generalmente enlaces a otras partes del sitio.
 
 3. <main>: Indica el contenido principal de la página, excluyendo las cabeceras, pies de página y barras laterales.
 
-4. <article>: Representa un contenido independiente y autocontenible, como una publicación de blog o un artículo de noticias.
+4. <footer>: Representa el pie de una sección o de un sitio web. Generalmente contiene información de copyright, enlaces de contacto y otros detalles relacionados con el pie de página.
+              <footer>
+                  <p>Contact me at +1 234 567 8910 </p>
+              </footer>
 
-5. <section>: Define una sección genérica de un documento. Puede contener encabezados, párrafos, listas, etc.
+4. <section>: Define una sección genérica de un documento. Puede contener encabezados, párrafos, listas, etc.
+
+5. <article>: Representa un contenido independiente y autocontenible, como una publicación de blog o un artículo de noticias.
 
 6. <aside>: Se utiliza para marcar contenido que está relacionado con el contenido que lo rodea, pero que puede considerarse independiente.
 
-7. <footer>: Representa el pie de una sección o de un sitio web. Generalmente contiene información de copyright, enlaces de contacto y otros detalles relacionados con el pie de página.
+7. <figure>: Engloba todos los tipos de media (fotos, videos, musica).
+
+8. <figcaption>: Se usa para describir el media en el figure.
+
+9. Media:
+  9.1. <video>
+            <video src="https://content.codecademy.com/courses/SemanticHTML/dog-video.mp4" controls>
+            </video>
+  9.2. <embed>
+            <embed src="https://content.codecademy.com/courses/SemanticHTML/dog-on-beach.gif"/>
+  9.3. <audio>
+             <audio controls>
+                <source src="https://content.codecademy.com/courses/SemanticHTML/dogBarking.mp3" type="audio/mp3">
+              </audio> 
+  9.4. <img>
+           <figure>
+              <img src="https://content.codecademy.com/courses/SemanticHTML/dogimage.jpeg"/>
+            <figcaption>A cute dog.</figcaption>
+            </figure>  
+
+
 
 El uso de etiquetas semánticas no solo mejora la estructura del código, sino que también tiene beneficios en términos de accesibilidad, SEO y mantenimiento del sitio. 
 Los navegadores y otras herramientas pueden interpretar mejor la estructura del documento, facilitando la indexación de los motores de búsqueda y la navegación para usuarios con discapacidades.
+
+
+
+                                                                            EJEMPLO ENTERO!
+
+  <!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Navigational Links</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#posts">Posts</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main>
+      <section>
+        <article>
+          <h2>Facts About Dogs</h2>
+          <p>
+          Dogs have a sense of time. It's been proven that they know the difference between a hour and five. If conditioned to, they can predict future events, such as regular walk times.
+          </p>
+        </article>
+        <aside>
+          <p>A study was conducted on dogs being away from their owners for varying hours and the studies show that dogs who were away from their owners the longest showed the greatest amount of affection!
+          </p> 
+        </aside>
+      </section> 
+      <figure>
+        <img src="https://content.codecademy.com/courses/SemanticHTML/dogimage.jpeg"/>
+        <figcaption>A cute dog.</figcaption>
+      </figure>  
+      <audio controls>
+        <source src="https://content.codecademy.com/courses/SemanticHTML/dogBarking.mp3" type="audio/mp3">
+      </audio> 
+      <video src="https://content.codecademy.com/courses/SemanticHTML/dog-video.mp4" controls>
+      </video>
+      <embed src="https://content.codecademy.com/courses/SemanticHTML/dog-on-beach.gif"/>
+         
+    </main>
+    
+    <footer>
+      <p>Contact me at +1 234 567 8910 </p>
+    </footer>
+              
+  </body>
+</html>
