@@ -37,6 +37,37 @@ We could also add a paragraph to provide even more detail. Let’s see an exampl
       <form action="/practice.html" method="POST">
       <h1>Davies Burgers</h1>
       <p>The best burgers in town, by far!</p>
+      </form>
     </section>
   </body>
 </html>
+
+
+
+
+                                                                                INPUT (PARA RELLENAR FORMULARIO)
+<form action="/example.html" method="POST">
+  <input type="text" name="first-text-field" value="already pre-filled">
+</form>
+
+                                                                                  PARA AÑADIR USERNAME
+
+<label for="username">
+  <input type="text" name="username" id="username">
+
+                                                                                PARA HACER UN PASSWORD
+<label for="user-pw">Password:</label>
+        <!--Add your code below-->
+        <input id="user-pw" type="password" name="user-pw">
+
+                                                                              USERNAME Y PASSWORD TODO JUNTO
+  <form>
+				<h1>Login to start creating a burger!</h1>
+        <label for="username">Username:</label>
+  			<input type="text" name="username" id="username">
+        <br>
+        <label for="user-pw">Password:</label>
+        <!--Add your code below-->
+        <input id="user-pw" type="password" name="user-pw">
+				
+  </form>
