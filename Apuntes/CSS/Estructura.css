@@ -21,3 +21,24 @@ Inline Style Terms:
 
 CAMBIAR DE COLOR UN PARRAFO ENTERO: <p style='color: red;'>TEXTO</p>
 CAMBIAR DE TAMAÑO UN PARRAFO: <p style='color: red; font-size: 20px;'>TEXTO</p>
+INTERNAL STYLESHEET: 
+                      <head>
+                        <style>
+                          p {
+                            color: red;
+                            font-size: 20px;
+                            }
+                        </style>
+                      </head>
+EXTERNAL STYLESHEET: SE CRERAN2 ARCHIVOS DISTINTOS, Y LA PARTE HYML VA SUELTA, Y LA PARTE CSS A LA OTRA. NO AFECTA
+                      index.html
+                      style.css
+COMO LINKEAR HTML Y CSS:
+                        - VA CREADO DENTRO DE LA SECCION <head></head>
+                        <link href='https://www.codecademy.com/stylesheets/style.css' (el link donde esta el css, si es interno, usar './style.css') rel='stylesheet'>
+                        - RESUMEN:
+                                    <head>
+                                        <link href='https://www.codecademy.com/stylesheets/style.css' (el link donde esta el css, si es interno, usar './style.css') rel='stylesheet'>
+                                    </head>
+
+
