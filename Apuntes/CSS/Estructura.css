@@ -20,6 +20,10 @@ Inline Style Terms:
 
 
 CAMBIAR DE COLOR UN PARRAFO ENTERO: <p style='color: red;'>TEXTO</p>
+                                    ALTERNATIVA:
+                                            p {
+                                              color: red;
+                                            }
 CAMBIAR DE TAMAÑO UN PARRAFO: <p style='color: red; font-size: 20px;'>TEXTO</p>
 INTERNAL STYLESHEET: 
                       <head>
