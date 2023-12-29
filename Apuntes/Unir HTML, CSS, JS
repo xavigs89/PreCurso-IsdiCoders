@@ -1,0 +1,26 @@
+En el index.html tenemos que linquear el CSS para darle estilos y el JS para darle comportamiento a nuestra página web.
+
+El CSS lo linqueamos con el tag link y escribimos la ruta dónde se encuentra en el atributo href.
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My web page</title>
+
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+  </head>
+</html>
+
+
+El JS lo linqueamos con el tag script al final, justo antes de cerrar el </body> y escribimos la ruta dónde se encuentra en el atributo src.
+
+<body>
+  .. ... // code here ... ...
+
+ <script src="/index.js"></script>
+
+</body>
