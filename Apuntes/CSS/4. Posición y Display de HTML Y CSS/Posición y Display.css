@@ -1,1 +1,195 @@
+1. POSITION:
 
+
+                                                                               EJEMPLO
+                                                              .question {
+                                                                  text-align: center;
+                                                                  position: (puede ser static, relative, absolute, fixed o sticky) ;
+                                                                  top: 40px;
+                                                                        }
+
+The default position of an element can be changed by setting its position property. The position property can take one of five values:
+
+A. static = position: static;      the default value (it does not need to be specified)
+
+B. relative = position: relative;   This value allows you to position an element relative to its default static position on the web page. 
+                                    This has to be accompanied with one or more of the following offset properties that will move the element away from its default static position:
+                                        - top - moves the element down from the top.
+                                        - bottom - moves the element up from the bottom.
+                                        - left - moves the element away from the left side (to the right).
+                                        - right - moves the element away from the right side (to the left).
+                                    You can specify values in pixels, ems, or percentages, among others, to dial in exactly how far you need the element to move.
+                                                           
+C. absolute = position: absolute;   When an element’s position is set to absolute, all other elements on the page will ignore the element and act like it is not present on the page. 
+                                    The element will be positioned relative to its closest positioned parent element, while offset properties can be used to determine the final position from there.
+
+D. fixed = position: fixed;         When an element’s position is set to absolute, the element will scroll with the rest of the document when a user scrolls.
+                                    We can fix an element to a specific position on the page (regardless of user scrolling) by setting its position to fixed, 
+                                    and accompanying it with the familiar offset properties top, bottom, left, and right. Se fija lo que tu quieras (header, p, title, etc)
+
+E. sticky = position: sticky;       The sticky value is another position value that keeps an element in the document flow as the user scrolls, 
+                                    but sticks to a specified position as the page is scrolled further. 
+                                    This is done by using the sticky value along with the familiar offset properties, as well as one new one.
+
+
+
+
+2. Z-INDEX:
+
+When boxes on a web page have a combination of different positions, the boxes (and therefore, their content) can overlap with each other, making the content difficult to read or consume.
+The z-index property controls how far back or how far forward an element should appear on the web page when elements overlap. 
+This can be thought of as the depth of elements, with deeper elements appearing behind shallower elements.
+
+The z-index property accepts integer values. Depending on their values, the integers instruct the browser on the order in which elements should be layered on the web page.
+
+          EJEMPLO!!
+
+.blue-box {
+  background-color: blue;
+  position: relative;
+  z-index: 1;
+}
+
+.green-box {
+  background-color: green;
+  position: relative;
+  top: -170px;
+  left: 170px;
+}
+
+
+
+3. DISPLAY:
+
+Every HTML element has a default display value that dictates if it can share horizontal space with other elements. 
+Some elements fill the entire browser from left to right regardless of the size of their content. 
+Other elements only take up as much horizontal space as their content requires and can be directly next to other elements.
+
+In this lesson, we’ll cover three values for the display property: 
+
+A. Inline = display: inline;        The default display for some elements, such as <em>, <strong>, and <a>, is called inline. 
+                                    Inline elements have a box that wraps tightly around their content, only taking up the amount of space necessary to display 
+                                    their content and not requiring a new line after each element. 
+                                    The height and width of these elements cannot be specified in the CSS document. 
+                                    For example, the text of an anchor tag (<a>) will, by default, be displayed on the same line as the surrounding text, 
+                                    and it will only be as wide as necessary to contain its content. 
+                                    inline elements cannot be altered in size with the height or width CSS properties.
+                                    The CSS display property provides the ability to make any element an inline element. 
+                                    This includes elements that are not inline by default such as paragraphs, divs, and headings.
+
+                                                                h1 {
+                                                                  display: inline;
+                                                                    }
+                                    Link apuntes: https://developer.mozilla.org/en-US/docs/Glossary/Inline-level_content
+
+                                                    h1 {
+                                                      display: inline;
+                                                        }
+
+B. Block = display: block;          Elements that are not displayed in the same line as the content around them. 
+                                    These elements fill the entire width of the page by default, but their width property can also be set. Unless otherwise specified, 
+                                    they are the height necessary to accommodate their content.
+
+                                    Elements that are block-level by default include all levels of heading elements (<h1> through <h6>), <p>, <div> and <footer>
+                                    Link apuntes: https://developer.mozilla.org/en-US/docs/Glossary/Block-level_content
+
+                                                      strong {
+                                                        display: block;
+                                                          }
+
+C. Inline-block= display:inline-block;        Combines features of both inline and block elements. 
+                                              Inline-block elements can appear next to each other and we can specify their dimensions using the width and height properties. 
+                                              Images are the best example of default inline-block elements.
+
+                                              For example, the <div>s below will be displayed on the same line and with the specified dimensions:
+
+                                                                          EN HTML
+
+                                                                <div class="rectangle">
+                                                                  <p>I’m a rectangle!</p>
+                                                                    </div>
+                                                                    <div class="rectangle">
+                                                                        <p>So am I!</p>
+                                                                    </div>
+                                                                  <div class="rectangle">
+                                                                      <p>Me three!</p>
+                                                                    </div>
+
+                                                                          EN CSS
+
+                                                                      .rectangle {
+                                                                        display: inline-block;
+                                                                        width: 200px;
+                                                                        height: 300px;
+                                                                                  }
+
+
+4. FLOAT:
+
+So far, you’ve learned how to specify the exact position of an element using offset properties. 
+If you’re simply interested in moving an element as far left or as far right as possible in the container, you can use the float property.
+
+The float property is commonly used for wrapping text around an image. 
+Note, however, that moving elements left or right for layout purposes is better suited for tools like CSS grid and flexbox, which you’ll learn about later on.
+
+The float property is often set using one of the values below:
+
+A. left - moves, or floats, elements as far left as possible.
+B. right - moves elements as far right as possible.
+
+                                                                  EJEMPLO EN HTML!
+                                                                
+                                                              .green-section {
+                                                                  width: 50%;
+                                                                  height: 150px;
+                                                                          }
+
+                                                            .orange-section {
+                                                                  background-color: orange;
+                                                                  width: 50%;
+                                                                  float: right;
+                                                                            }
+
+5. CLEAR:
+
+The float property can also be used to float multiple elements at once. However, when multiple floated elements have different heights, 
+it can affect their layout on the page. Specifically, elements can “bump” into each other and not allow other elements to properly move to the left or right.
+
+The clear property specifies how elements should behave when they bump into each other on the page. It can take on one of the following values:
+
+A. left—the left side of the element will not touch any other element within the same containing element.
+B. right—the right side of the element will not touch any other element within the same containing element.
+C. both—neither side of the element will touch any other element within the same containing element.
+D. none—the element can touch either side.
+
+                                                                EJEMPLO EN HTML!
+
+                                                                    div {
+                                                                      width: 200px;
+                                                                      float: left;
+                                                                        }
+
+                                                                  div.special {
+                                                                      clear: left;
+                                                                            }
+
+
+RESUMEN:
+
+- The position property allows you to specify the position of an element.
+- When set to relative, an element’s position is relative to its default position on the page.
+- When set to absolute, an element’s position is relative to its closest positioned parent element. 
+  It can be pinned to any part of the web page, but the element will still move with the rest of the document when the page is scrolled. 
+- When set to fixed, an element’s position can be pinned to any part of the web page. The element will remain in view no matter what.
+- When set to sticky, an element can stick to a defined offset position when the user scrolls its parent container.
+- The z-index of an element specifies how far back or how far forward an element appears on the page when it overlaps other elements.
+- The display property allows you to control how an element flows vertically and horizontally in a document.
+- inline elements take up as little space as possible, and they cannot have manually adjusted width or height.
+- block elements take up the width of their container and can have manually adjusted heights.
+- inline-block elements can have set width and height, but they can also appear next to each other and do not take up their entire container width.
+- The float property can move elements as far left or as far right as possible on a web page.
+- You can clear an element’s left or right side (or both) using the clear property.
+
+
+When combined with an understanding of the box model, positioning can create visually appealing web pages. 
+So far, we’ve focused on adding content in the form of text to a web page. In the next unit, you’ll learn how to add and manipulate images to a we
