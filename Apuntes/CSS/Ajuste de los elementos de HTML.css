@@ -6,7 +6,7 @@
                                                                   text-align: center;
                                                                   position: (puede ser static, relative, absolute, fixed o sticky) ;
                                                                   top: 40px;
-                                                                }
+                                                                        }
 The default position of an element can be changed by setting its position property. The position property can take one of five values:
 
 A. static = position: static;      the default value (it does not need to be specified)
