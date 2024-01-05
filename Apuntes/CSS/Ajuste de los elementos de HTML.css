@@ -1,7 +1,16 @@
 1. POSITION:
+
+
+                                                                               EJEMPLO
+                                                              .question {
+                                                                  text-align: center;
+                                                                  position: (puede ser static, relative, absolute, fixed o sticky) ;
+                                                                  top: 40px;
+                                                                }
 The default position of an element can be changed by setting its position property. The position property can take one of five values:
 
 A. static = position: static;      the default value (it does not need to be specified)
+
 B. relative = position: relative;   This value allows you to position an element relative to its default static position on the web page. 
                                     This has to be accompanied with one or more of the following offset properties that will move the element away from its default static position:
                                         - top - moves the element down from the top.
@@ -9,12 +18,14 @@ B. relative = position: relative;   This value allows you to position an element
                                         - left - moves the element away from the left side (to the right).
                                         - right - moves the element away from the right side (to the left).
                                     You can specify values in pixels, ems, or percentages, among others, to dial in exactly how far you need the element to move.
-                                                            EJEMPLO
-                                                              .question {
-                                                                  text-align: center;
-                                                                  position: relative;
-                                                                  top: 40px;
-                                                                }
-C. absolute
-D. fixed
-E. sticky
+                                                           
+C. absolute = position: absolute;   When an element’s position is set to absolute, all other elements on the page will ignore the element and act like it is not present on the page. 
+                                    The element will be positioned relative to its closest positioned parent element, while offset properties can be used to determine the final position from there.
+
+D. fixed = position: fixed;         When an element’s position is set to absolute, the element will scroll with the rest of the document when a user scrolls.
+                                    We can fix an element to a specific position on the page (regardless of user scrolling) by setting its position to fixed, 
+                                    and accompanying it with the familiar offset properties top, bottom, left, and right. Se fija lo que tu quieras (header, p, title, etc)
+
+E. sticky = position: sticky;       The sticky value is another position value that keeps an element in the document flow as the user scrolls, 
+                                    but sticks to a specified position as the page is scrolled further. 
+                                    This is done by using the sticky value along with the familiar offset properties, as well as one new one.
