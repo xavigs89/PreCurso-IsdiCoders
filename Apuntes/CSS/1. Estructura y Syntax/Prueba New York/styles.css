@@ -1,1 +1,36 @@
+/* PARA AJUSTAR EL TAMAÑO Y LA POSICIÓN DEL TEXTO DEL ENCABEZADO */
+h1 {
+  font-size: 36px; /* tamaño del texto del encabezado */
+  color: #333; /* color del texto del encabezado */
+  margin: 0; /* eliminar margen arriba y abajo */
+  padding: 15px 0; /* agregar un margen de 15px a cada lado */
+  text-align: center; /* centrar el texto */
+  line-height: 1.2; /* altura de línea */
+}
 
+/* PARA CENTRAR Y DAR UN MARGEN A LAS IMAGENES DEL CUERPO DEL TEXTO */
+img {
+  display: block;
+  margin: 15px auto; /* agregar un margen de 15px a cada lado */
+}
+
+/* PARA CAMBIAR EL TIPO DE LETRA, COLOR, TAMAÑO, ESPACIADO, ETC. DEL CUERPO DEL TEXTO */
+body {
+  font-size: 16px; /* tamaño del texto del cuerpo */
+  color: #333; /* color del texto del cuerpo */
+  line-height: 1.5; /* altura de línea */
+}
+
+/* PARA AJUSTAR EL TAMAÑO Y LA POSICIÓN DEL TEXTO DE LOS ENLACES */
+a {
+  color: #333; /* color del texto de los enlaces */
+  text-decoration: none; /* eliminar subrayado de los enlaces */
+}
+
+/* PARA CAMBIAR EL TIPO DE LETRA, COLOR, TAMAÑO, ESPACIADO, ETC. DE LOS PIE DE PÁGINA */
+footer {
+  font-size: 14px; /* tamaño del texto del pie de página */
+  color: #999; /* color del texto del pie de página */
+  line-height: 1.5; /* altura de línea */
+  text-align: center; /* centrar el texto */
+}
