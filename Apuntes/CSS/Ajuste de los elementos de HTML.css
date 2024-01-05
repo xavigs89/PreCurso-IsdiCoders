@@ -1,1 +1,20 @@
+1. POSITION:
+The default position of an element can be changed by setting its position property. The position property can take one of five values:
 
+A. static = position: static;      the default value (it does not need to be specified)
+B. relative = position: relative;   This value allows you to position an element relative to its default static position on the web page. 
+                                    This has to be accompanied with one or more of the following offset properties that will move the element away from its default static position:
+                                        - top - moves the element down from the top.
+                                        - bottom - moves the element up from the bottom.
+                                        - left - moves the element away from the left side (to the right).
+                                        - right - moves the element away from the right side (to the left).
+                                    You can specify values in pixels, ems, or percentages, among others, to dial in exactly how far you need the element to move.
+                                                            EJEMPLO
+                                                              .question {
+                                                                  text-align: center;
+                                                                  position: relative;
+                                                                  top: 40px;
+                                                                }
+C. absolute
+D. fixed
+E. sticky
