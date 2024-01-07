@@ -1,1 +1,48 @@
+Pueden diferenciarse entre:
+
+A. PRIMER PLANO: es el color en el que aparece un elemento. Por ejemplo, cuando se diseña un título para que parezca verde, se aplica el estilo al color de primer plano del título.
+color: esta propiedad aplica estilo al color de primer plano de un elemento.
+        color: red;
+
+
+
+B. SEGUNDO PLANO O FONDO: cuando un título tiene un estilo que hace que su fondo parezca amarillo, el color de fondo del título tiene un estilo.
+background-color: esta propiedad aplica estilo al color de fondo de un elemento.
+      background-color: blue;
+
+
+TIPOLOGÍAS DE COLORES:
+
+1. COLORES CON NOMBRES:
+link colores alfabéticos: https://w3schools.sinsixx.com/css/css_colornames.asp.htm#:~:text=The%20W3C%20HTML%20and%20CSS,teal%2C%20white%2C%20and%20yellow.
+link colores ordenado por valores: https://w3schools.sinsixx.com/css/css_colorsfull.asp.htm
+
+
+2. COLORES HEXADECIMALES: 
+consiste en cambiar el nombre del color, por un formato numérico y de letras. Ejemplos:
+          color o background-color    sienna: se cambia por #A0522D
+          color o background-color    saddlebrown: se cambia por #8B4513
+          color o background-color    brown: se cambia por #A52A2A
+          color o background-color     black: se cambia por #000000
+
+Link para codigos de colores: https://www.codecademy.com/learn/learn-css/modules/learn-css-colors/cheatsheet
+
+
+3. COLORES RGB: 
+Usa números decimales en lugar de números hexadecimales y se ve así:
+          color background-color: rgb(23, 45, 23);
+
+Cada uno de los tres valores representa un componente de color y cada uno puede tener un valor numérico decimal de 0 a 255. 
+El primer número representa la cantidad de rojo, el segundo es verde y el tercero es azul. 
+Estos colores son exactamente iguales que los hexadecimales, pero con una sintaxis diferente y un sistema numérico diferente.
+En general, las representaciones de color hexadecimal y RGB son equivalentes. Cuál elijas es una cuestión de gusto personal. 
+Dicho esto, es bueno elegir uno y ser coherente en todo el CSS, porque es más fácil comparar hexadecimal con hexadecimal y RGB con RGB.
+
+
+3. COMBINACIÓN ENTRE COLORES HEX Y RGB:
+Podemos utilizar este nuevo conjunto de colores para perfeccionar el estilo de nuestra página web, ya que tiene más registros que los nombres de colores.
+Tanto en hexadecimal como en RGB, tenemos tres valores, uno para cada color. Cada uno puede ser uno de 256 valores. 
+En concreto, 256 * 256 * 256 = 16.777.216. Esa es la cantidad de colores que ahora podemos representar. ¡Compárelo con los aproximadamente 140 colores CSS con nombre!
+
+Recuerde que comenzamos con colores con nombre, los convertimos a hexadecimal y luego convertimos algunos de los colores hexadecimales a rgb. A menos que cometamos un error, todos los colores deberían ser iguales visualmente. Usemos nuestra paleta ampliada para elegir colores más refinados.
 
