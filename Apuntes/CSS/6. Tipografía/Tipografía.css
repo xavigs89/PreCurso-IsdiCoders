@@ -1,3 +1,5 @@
+TIPOGRAFÍA: es el arte de organizar el texto en una página.
+
 1. FONT-FAMILY:
   A. MULTI-WORD VALUES: Al especificar un tipo de letra con varias palabras, como Times New Roman, se recomienda utilizar comillas (' ') para agrupar las palabras, así:
       h1 {
@@ -120,6 +122,88 @@ Fuentes gratis:
 Se pueden vincular desde tu documento HTML con un elemento <link> proporcionado.
 Fuentes de pago: 
 - Fonts.com: https://www.fonts.com/
+
+  A. FUENTES WEB USANDO <link>
+Link: https://fonts.google.com/
+Cuando seleccionas una fuente en Google Fonts, se te mostrarán todos los diferentes estilos disponibles para esa fuente en particular. Luego puedes seleccionar los estilos que desea utilizar en su sitio.
+Cuando haya terminado de seleccionar una fuente y sus estilos, puede revisar la familia de fuentes seleccionada y se generará automáticamente un elemento <link> para que lo use en su sitio.
+El elemento <link> generado debe agregarse al elemento <head> en su documento HTML para que esté listo para usarse en su CSS.
+        <head>
+            <!-- Add the link element for Google Fonts along with other metadata -->
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+        </head>
+
+Luego, en archivo de CSS, usas esto:
+          p {
+            font-family: 'Roboto', sans-serif;
+            }
+
+
+ B. FUENTES WEB USANDO @font-face
+Link: https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face
+Vienen en algunos formatos de archivo diferentes, como:
+
+- OTF (fuente OpenType)
+- TTF (fuente TrueType)
+- WOFF (formato de fuente abierta web)
+- WOFF2 (formato de fuente abierta web 2)
+
+Los diferentes formatos son una progresión de estándares sobre cómo funcionarán las fuentes con diferentes navegadores, siendo WOFF2 el más progresivo. 
+Es una buena idea incluir los formatos TTF, WOFF y WOFF2 con su regla @font-face para garantizar la compatibilidad en todos los navegadores.
+Info adicional: https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Web_fonts#generating_the_required_code
+ 
+Como usarlo?
+https://css-tricks.com/snippets/css/using-font-face-in-css/
+Dentro de la sección "Familias seleccionadas", puede usar el botón "Descargar" para descargar los archivos de fuentes a su PC. 
+Los archivos se descargarán en un único formato, en este caso TTF. 
+Puede utilizar herramientas adicionales para generar tipos de archivos adicionales para WOFF y WOFF2; consulte la lista de generadores de fuentes de MDN para obtener más información.
+Cuando tenga los archivos que necesita, muévalos a una carpeta dentro del directorio de trabajo de su sitio web y estará listo para usarlos en un conjunto de reglas @font-face.
+        @font-face {
+              font-family: 'MyParagraphFont';
+              src: url('fonts/Roboto.woff2') format('woff2'),
+              url('fonts/Roboto.woff') format('woff'),
+              url('fonts/Roboto.ttf') format('truetype');
+                    }
+
+La regla @font-face at se utiliza como selector. Se recomienda definir el conjunto de reglas @font-face en la parte superior de su hoja de estilos CSS.
+Dentro del bloque de declaración, la propiedad font-family se utiliza para establecer un nombre personalizado para la fuente descargada. 
+El nombre puede ser el que elijas, pero debe estar entre comillas. En el ejemplo, la fuente se denomina 'MyParagraphFont', ya que esta fuente se utilizará para todos los párrafos.
+La propiedad src contiene tres valores, cada uno de los cuales especifica la ruta relativa al archivo de fuente y su formato. 
+En este ejemplo, los archivos de fuentes se almacenan dentro de una carpeta llamada fuentes dentro del directorio de trabajo.
+Tenga en cuenta que el orden de los diferentes formatos es importante porque nuestro navegador comenzará desde la parte superior de la lista y buscará hasta encontrar un formato de fuente que admita. 
+Una vez definida la regla @font-face at, ¡puedes usar la fuente en tu hoja de estilo!
+              p {
+                font-family: 'MyParagraphFont', sans-serif;
+                }
+Al igual que con cualquier otra fuente, puede utilizar la propiedad font-family para configurar la fuente en cualquier elemento HTML. 
+Se puede hacer referencia a la fuente descargada con el nombre que proporcionó como valor de la propiedad font-family en el conjunto de reglas @font-face; en este caso, 'MyParagraphFont'.
+
+@font-face {
+  font-family: 'GlegooBanner';
+  src: url('../fonts/Glegoo-Regular.woff2') format('woff2'),
+       url('../fonts/Glegoo-Regular.woff') format('woff'),
+       url('../fonts/Glegoo-Regular.ttf') format('truetype');
+}
+
+
+RESUMEN!!!
+
+- El texto puede aparecer en negrita o fino con la propiedad de peso de fuente.
+- El texto puede aparecer en cursiva con la propiedad de estilo de fuente.
+- El espacio vertical entre líneas de texto se puede modificar con la propiedad line-height.
+- Las fuentes Serif tienen detalles adicionales en los extremos de cada letra. Las fuentes Sans-Serif no.
+- Las fuentes alternativas se utilizan cuando una determinada fuente no está instalada en la computadora de un usuario.
+- La propiedad de espaciado de palabras cambia la distancia entre palabras individuales.
+- La propiedad de espaciado entre letras cambia la distancia entre letras individuales.
+- La propiedad text-align cambia la alineación horizontal del texto.
+- Google Fonts proporciona fuentes gratuitas que se pueden utilizar en un archivo HTML con la etiqueta <link> o la propiedad @font-face.
+- Se pueden agregar fuentes locales a un documento con la propiedad @font-face y la ruta a la fuente de la fuente.
+- Utilizando sus nuevos conocimientos de tipografía CSS, no dude en editar más el código para hacer que la página web sea más atractiva.
+
+
+
+
+
 
 
 
