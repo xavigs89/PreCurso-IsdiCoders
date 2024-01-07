@@ -14,6 +14,8 @@ background-color: esta propiedad aplica estilo al color de fondo de un elemento.
 TIPOLOGÍAS DE COLORES:
 
 1. COLORES CON NOMBRES:
+        color: sienna
+        color: saddlebrown
 link colores alfabéticos: https://w3schools.sinsixx.com/css/css_colornames.asp.htm#:~:text=The%20W3C%20HTML%20and%20CSS,teal%2C%20white%2C%20and%20yellow.
 link colores ordenado por valores: https://w3schools.sinsixx.com/css/css_colorsfull.asp.htm
 
@@ -42,7 +44,8 @@ Dicho esto, es bueno elegir uno y ser coherente en todo el CSS, porque es más f
 3. COMBINACIÓN ENTRE COLORES HEX Y RGB:
 Podemos utilizar este nuevo conjunto de colores para perfeccionar el estilo de nuestra página web, ya que tiene más registros que los nombres de colores.
 Tanto en hexadecimal como en RGB, tenemos tres valores, uno para cada color. Cada uno puede ser uno de 256 valores. 
-En concreto, 256 * 256 * 256 = 16.777.216. Esa es la cantidad de colores que ahora podemos representar. ¡Compárelo con los aproximadamente 140 colores CSS con nombre!
+En concreto, 256 * 256 * 256 = 16.777.216. Esa es la cantidad de colores que ahora podemos representar.
 
-Recuerde que comenzamos con colores con nombre, los convertimos a hexadecimal y luego convertimos algunos de los colores hexadecimales a rgb. A menos que cometamos un error, todos los colores deberían ser iguales visualmente. Usemos nuestra paleta ampliada para elegir colores más refinados.
+Recuerde que comenzamos con colores con nombre, los convertimos a hexadecimal y luego convertimos algunos de los colores hexadecimales a rgb. 
+A menos que cometamos un error, todos los colores deberían ser iguales visualmente. Usemos nuestra paleta ampliada para elegir colores más refinados.
 
