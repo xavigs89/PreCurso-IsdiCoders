@@ -1,1 +1,128 @@
+1. FONT-FAMILY:
+  A. MULTI-WORD VALUES: Al especificar un tipo de letra con varias palabras, como Times New Roman, se recomienda utilizar comillas (' ') para agrupar las palabras, así:
+      h1 {
+        font-family: 'Times New Roman';
+          }
+
+  B. FUENTES SEGURAS PARA WEB: Hay una selección de fuentes que aparecerán iguales en todos los navegadores y sistemas operativos. Estas fuentes se conocen como fuentes seguras para la web. 
+      Link: https://www.cssfontstack.com/
+
+  C. FUENTES ALTERNATIVAS:
+      h1 {
+        font-family: Caslon, Georgia, 'Times New Roman';
+          }
+En el ejemplo anterior, Georgia y Times New Roman son fuentes alternativas a Caslon. 
+Cuando especifica un grupo de fuentes, tiene lo que se conoce como pila de fuentes. Una pila de fuentes suele contener una lista de fuentes de aspecto similar. 
+Aquí, el navegador intentará primero utilizar la fuente Caslon. Si no está disponible, intentará utilizar una fuente similar, Georgia. Y si Georgia no está disponible, intentará utilizar Times New Roman.
+
+  D. FUENTES SERIF:
+Las fuentes Caslon, Georgia y Times New Roman son fuentes Serif. Las fuentes Serif tienen detalles adicionales en los extremos de cada letra, a diferencia de las fuentes Sans-Serif, que no tienen detalles adicionales.
+serif y sans-serif también son valores de palabras clave que se pueden agregar como fuente alternativa final si no hay nada más disponible en la pila de fuentes.
+      h1 {
+        font-family: Caslon, Georgia, 'Times New Roman', serif;
+          }
+En este último ejemplo, la pila de fuentes tiene 4 fuentes. Si las primeras 3 fuentes no están disponibles, el navegador utilizará cualquier fuente serif que esté disponible en el sistema.
+
+
+
+2. FONT-WEIGHT:
+Controla qué tan fino o en negrita aparece el texto. Se puede especificar con palabras clave o valores numéricos.
+Link: https://www.codecademy.com/resources/docs/css/typography/font-weight.
+
+A. KEYWORD VALUES (Valores de palabras clave):
+La propiedad font-weight puede tomar cualquiera de estos valores de palabras clave:
+
+- Bold (negrita): peso de fuente en negrita.
+- Normal: peso de fuente normal. Este es el valor predeterminado.
+- Lighter (más ligero): un peso de fuente más ligero que el valor principal del elemento.
+- Bolder (Más negrita): un peso de fuente más negrita que el valor principal del elemento.
+
+B. Numerical Values (Valores numéricos):
+Pueden oscilar entre 1 (el más claro) y 1000 (el más negrita), pero es una práctica común utilizar incrementos de 100. 
+Un peso de fuente de 400 es igual al valor de palabra clave normal y un peso de fuente de 700 es igual a negrita.
+          .left-section {
+              font-weight: 700;
+                    }
+
+          .right-section {
+              font-weight: bold; 
+                    }
+En el ejemplo anterior, el texto de los elementos de las clases .left-section y .right-section aparecerá en negrita.
+Es importante tener en cuenta que no a todas las fuentes se les puede asignar un peso de fuente numérico y no todos los pesos de fuente numéricos están disponibles para todas las fuentes. 
+Es una buena práctica buscar la fuente que estás utilizando para ver qué valores de peso de fuente están disponibles.
+
+
+
+3. FONT STYLE (Estilo de fuentes):
+Link https://www.codecademy.com/resources/docs/css/typography/font-style
+          h3 {
+            font-style: italic;
+              }
+El valor de cursiva hace que el texto aparezca en cursiva. La propiedad de estilo de fuente también tiene un valor normal que es el predeterminado.
+
+
+
+4. TEXT TRANSFORMATION (Transformador de texto):
+También se puede diseñar el texto para que aparezca todo en mayúsculas o minúsculas con la propiedad de transformación de texto.
+          h1 {
+            text-transform: uppercase;
+              }
+El código del ejemplo anterior formatea todos los elementos <h1> para que aparezcan en mayúsculas, independientemente del caso utilizado para el encabezado dentro del código HTML. 
+Alternativamente, el valor en minúscula podría usarse para formatear el texto en minúsculas.
+Dado que el texto se puede escribir directamente en mayúsculas o minúsculas dentro de un archivo HTML, ¿qué sentido tiene una regla CSS que le permita formatear letras en mayúsculas?
+Dependiendo del tipo de contenido que muestra una página web, puede tener sentido diseñar siempre un elemento específico con letras mayúsculas o minúsculas. 
+Por ejemplo, un sitio web que informa noticias de última hora puede decidir formatear todos los elementos del encabezado <h1> de modo que siempre aparezcan en mayúsculas, como en el ejemplo anterior. 
+También evitaría el texto en mayúsculas en el archivo HTML, lo que podría dificultar la lectura del código.
+
+
+5. TEXT LAYOUT (Diseño de texto):
+Las formas en que se puede mostrar o distribuir el texto dentro del contenedor del elemento son:
+
+  A. LETTER SPACING (Espaciado de letras):
+La propiedad de espacio entre letras se utiliza para establecer el espacio horizontal entre los caracteres individuales de un elemento. 
+No es común establecer el espacio entre letras, pero a veces puede ayudar a mejorar la legibilidad de ciertas fuentes o estilos. 
+La propiedad de espaciado entre letras toma valores de longitud en unidades, como 2 px o 0,5 em.
+        p {
+          letter-spacing: 2px;
+          }
+En el ejemplo anterior, cada carácter del elemento de párrafo estará separado por 2 píxeles.
+
+  B. WORD SPACING (Espaciado de palabras):
+Tampoco es común aumentar el espacio entre palabras, pero puede ayudar a mejorar la legibilidad del texto en negrita o ampliado. 
+La propiedad de espaciado de palabras también toma valores de longitud en unidades, como 3px o 0,2em.
+        h1 {
+          word-spacing: 0.3em;
+          }
+En el ejemplo anterior, el espacio entre palabras se establece en 0,3 em. 
+Para el espaciado entre palabras, se recomienda utilizar valores em porque el espaciado se puede establecer en función del tamaño de la fuente.
+
+  C. LINE HEIGHT (Altura de la línea):
+Se usa para establecer qué tan alto queremos que sea cada línea que contiene nuestro texto. 
+Los valores de altura de línea pueden ser un número sin unidades, como 1,2, o un valor de longitud, como 12 px, 5 % o 2 em.
+      p {
+        line-height: 1.4;
+        }
+En el ejemplo anterior, la altura entre líneas se establece en 1,4. Generalmente, se prefiere el valor sin unidades, ya que responde según el tamaño de fuente actual. 
+En otras palabras, si la altura de la línea se especifica mediante un número sin unidades, cambiar el tamaño de fuente reajustará automáticamente la altura de la línea.
+
+  D. TEXT ALIGNMENT (Alineador de texto):
+La propiedad text-align, con la que quizás ya esté familiarizado en la lección de Visual rules CSS, alinea el texto con su elemento principal.
+      h1 {
+        text-align: right;
+          }
+En el ejemplo anterior, el elemento <h1> está alineado hacia el lado derecho, en lugar del izquierdo predeterminado.
+
+
+6. WEB FONTS (Fuentes Web):
+Fuentes gratis:
+- Google fonts: https://fonts.google.com/
+- Adobe fonts: https://fonts.adobe.com/
+Se pueden vincular desde tu documento HTML con un elemento <link> proporcionado.
+Fuentes de pago: 
+- Fonts.com: https://www.fonts.com/
+
+
+
+
+
 
