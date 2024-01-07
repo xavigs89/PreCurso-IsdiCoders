@@ -13,15 +13,20 @@ background-color: esta propiedad aplica estilo al color de fondo de un elemento.
 
 TIPOLOGÍAS DE COLORES:
 
-1. COLORES CON NOMBRES:
+1. COLORES CON NOMBRES: hay mas de 140
         color: sienna
         color: saddlebrown
 link colores alfabéticos: https://w3schools.sinsixx.com/css/css_colornames.asp.htm#:~:text=The%20W3C%20HTML%20and%20CSS,teal%2C%20white%2C%20and%20yellow.
+link alternativo: https://developer.mozilla.org/en-US/docs/Web/CSS/named-color
 link colores ordenado por valores: https://w3schools.sinsixx.com/css/css_colorsfull.asp.htm
 
 
 2. COLORES HEXADECIMALES: 
-consiste en cambiar el nombre del color, por un formato numérico y de letras. Ejemplos:
+consiste en cambiar el nombre del color, por un formato numérico y de letras. 
+Es un sistema numérico que tiene dieciséis dígitos, del 0 al 9 seguidos de la "A" a la "F".
+Los valores hexadecimales siempre comienzan con # y especifican valores de rojo, azul y verde mediante números hexadecimales como #23F41A.
+Los valores hexadecimales de seis dígitos con valores duplicados para cada valor RGB se pueden reducir a tres dígitos.
+Ejemplos:
           color o background-color    sienna: se cambia por #A0522D
           color o background-color    saddlebrown: se cambia por #8B4513
           color o background-color    brown: se cambia por #A52A2A
@@ -31,21 +36,62 @@ Link para codigos de colores: https://www.codecademy.com/learn/learn-css/modules
 
 
 3. COLORES RGB: 
+Los colores RGB utilizan la sintaxis rgb() con un valor para el rojo, un valor para el azul y un valor para el verde.
+Los valores RGB van de 0 a 255 y tienen este aspecto: rgb(7, 210, 50).
 Usa números decimales en lugar de números hexadecimales y se ve así:
           color background-color: rgb(23, 45, 23);
+
+HSL significa tono (el color en sí), saturación (la intensidad del color) y luminosidad (qué tan claro u oscuro es un color).
+El tono varía de 0 a 360 y la saturación y la luminosidad se representan como porcentajes como este: hsl(200, 20%, 50%).
 
 Cada uno de los tres valores representa un componente de color y cada uno puede tener un valor numérico decimal de 0 a 255. 
 El primer número representa la cantidad de rojo, el segundo es verde y el tercero es azul. 
 Estos colores son exactamente iguales que los hexadecimales, pero con una sintaxis diferente y un sistema numérico diferente.
 En general, las representaciones de color hexadecimal y RGB son equivalentes. Cuál elijas es una cuestión de gusto personal. 
 Dicho esto, es bueno elegir uno y ser coherente en todo el CSS, porque es más fácil comparar hexadecimal con hexadecimal y RGB con RGB.
+RGB es conveniente porque se parece mucho a cómo los ordenadores representan los colores internamente.
 
 
-3. COMBINACIÓN ENTRE COLORES HEX Y RGB:
+                                                        COMBINACIÓN ENTRE COLORES HEX Y RGB:
 Podemos utilizar este nuevo conjunto de colores para perfeccionar el estilo de nuestra página web, ya que tiene más registros que los nombres de colores.
 Tanto en hexadecimal como en RGB, tenemos tres valores, uno para cada color. Cada uno puede ser uno de 256 valores. 
 En concreto, 256 * 256 * 256 = 16.777.216. Esa es la cantidad de colores que ahora podemos representar.
 
 Recuerde que comenzamos con colores con nombre, los convertimos a hexadecimal y luego convertimos algunos de los colores hexadecimales a rgb. 
 A menos que cometamos un error, todos los colores deberían ser iguales visualmente. Usemos nuestra paleta ampliada para elegir colores más refinados.
+
+
+4. HUE-SATURATION-LIGHTNESS (HSL) tono-saturación-luminosidad:
+Es similar a la forma decimal de RGB, aunque difiere en aspectos importantes. 
+El primer número representa el grado del tono y puede estar entre 0 y 360. 
+El segundo número representa la saturación.
+El tercer número representa la luminosidad.
+                                                                EJEMPLO!!
+        color o background-color: hsl(120, 60%, 70%);
+- Hue es el primer número. Se refiere a un ángulo en una rueda de colores. El rojo es 0 grados, el verde es 120 grados, el azul es 240 grados y luego vuelve al rojo en 360. 
+- La saturación se refiere a la intensidad o pureza del color. La saturación aumenta hasta el 100% a medida que el color se vuelve más rico. Disminuye hacia el 0% a medida que el color se vuelve más gris.
+- La luminosidad se refiere a qué tan claro u oscuro es el color. La mitad, o el 50%, es la luminosidad normal. 
+  Imagine un atenuador deslizante en un interruptor de luz que se enciende a mitad de camino. Al deslizar el atenuador hacia el 100%, el color se vuelve más claro y más cercano al blanco. 
+  Deslizar el atenuador hacia el 0% hace que el color sea más oscuro, más cercano al negro.
+
+En resumen, HSL es conveniente para ajustar los colores. En RGB, oscurecer un poco el color puede afectar a los tres componentes del color. 
+En HSL, eso es tan fácil como cambiar el valor de luminosidad. 
+HSL también es útil para crear un conjunto de colores que combinen bien seleccionando varios colores que tengan la misma luminosidad y saturación pero diferentes tonos.
+
+
+4.1. OPACIDAD Y ALPHA:
+Para usar opacidad en el esquema de color HSL, se usa hsla en lugar de hsl y cuatro valores en lugar de tres. Por ejemplo:
+        color: hsla(34, 100%, 50%, 0.1);
+Los primeros tres valores funcionan igual que hsl. El cuarto valor (que no hemos visto antes) es el alfa. Este último valor a veces se denomina opacidad.
+Alfa es un número decimal de cero a uno. Si alfa es cero, el color será completamente transparente. Si alfa es uno, el color será opaco. El valor de semitransparente sería 0,5.
+Cuando el alfa de un color está por debajo de uno, cualquier color detrás de él se fusionará. La fusión ocurre para cada píxel; no se produce borrosidad.
+
+El esquema de color RGB tiene una sintaxis similar para la opacidad, rgba. Nuevamente, los primeros tres valores funcionan igual que rgb y el último valor es alfa. Ejemplo:
+        color: rgba(234, 45, 98, 0.33);
+Alpha sólo se puede utilizar con colores HSL, RGB y hexadecimales; No podemos agregar el valor alfa para nombrar colores como el verde.
+Sin embargo, existe una palabra clave de color con nombre para opacidad cero, transparente. Es equivalente a rgba(0, 0, 0, 0) y se usa como cualquier otra palabra clave de color:
+        color: transparent;
+
+
+
 
