@@ -1,37 +1,39 @@
+A. USANDO FLEX!!!!
+
 1. justify-content:
-flex-start: Alinea elementos al lado izquierdo del contenedor.
-flex-end: Alinea elementos al lado derecho del contenedor.
-center: Alinea elementos en el centro del contenedor.
-space-between: Muestra elementos con la misma distancia entre ellos.
-space-around: Muestra elementos con la misma separación alrededor de ellos.
+- flex-start: Alinea elementos al lado izquierdo del contenedor.
+- flex-end: Alinea elementos al lado derecho del contenedor.
+- center: Alinea elementos en el centro del contenedor.
+- space-between: Muestra elementos con la misma distancia entre ellos.
+- space-around: Muestra elementos con la misma separación alrededor de ellos.
 
 
 2. align-items:
-flex-start: Alinea elementos a la parte superior del contenedor.
-flex-end: Alinea elementos a la parte inferior del contenedor.
-center: Alinea elementos en el centro (verticalmente hablando) del contenedor.
-baseline: Muestra elementos en la línea base del contenedor
-stretch: Elementos se estiran para ajustarse al contenedor.
+- flex-start: Alinea elementos a la parte superior del contenedor.
+- flex-end: Alinea elementos a la parte inferior del contenedor.
+- center: Alinea elementos en el centro (verticalmente hablando) del contenedor.
+- baseline: Muestra elementos en la línea base del contenedor
+- stretch: Elementos se estiran para ajustarse al contenedor.
 
 
 3. flex-direction:
-row: Elementos son colocados en la misma dirección del texto.
-row-reverse: Elementos son colocados en la dirección opuesta al texto.
-column: Elementos se colocan de arriba hacia abajo.
-column-reverse: Elementos se colocan de abajo hacia arriba.
+- row: Elementos son colocados en la misma dirección del texto.
+- row-reverse: Elementos son colocados en la dirección opuesta al texto.
+- column: Elementos se colocan de arriba hacia abajo.
+- column-reverse: Elementos se colocan de abajo hacia arriba.
 
 4. flex-wrap:
-nowrap: Cada elemento se ajusta en una sola línea.
-wrap: los elementos se envuelven alrededor de líneas adicionales.
-wrap-reverse: Los elementos se envuelven alrededor de líneas adicionales en reversa.
+- nowrap: Cada elemento se ajusta en una sola línea.
+- wrap: los elementos se envuelven alrededor de líneas adicionales.
+- wrap-reverse: Los elementos se envuelven alrededor de líneas adicionales en reversa.
 
 5. align-content:
-flex-start: Las líneas se posicionan en la parte superior del contenedor.
-flex-end: Las líneas se posicionan en la parte inferior del contenedor.
-center: Las líneas se posicionan en el centro (verticalmente hablando) del contenedor.
-space-between: Las líneas se muestran con la misma distancia entre ellas.
-space-around: Las líneas se muestran con la misma separación alrededor de ellas.
-stretch: Las líneas se estiran para ajustarse al contenedor.
+- flex-start: Las líneas se posicionan en la parte superior del contenedor.
+- flex-end: Las líneas se posicionan en la parte inferior del contenedor.
+- center: Las líneas se posicionan en el centro (verticalmente hablando) del contenedor.
+- space-between: Las líneas se muestran con la misma distancia entre ellas.
+- space-around: Las líneas se muestran con la misma separación alrededor de ellas.
+- stretch: Las líneas se estiran para ajustarse al contenedor.
 
 
 
@@ -39,3 +41,41 @@ flex-direction: column-reverse;
 flex-wrap: wrap-reverse;
 align-items: stretch;
 justify-content: center;
+
+
+
+B. USANDO GRID!
+
+- grid-column-start: poner numero de cuadricula; ( la expansión por defecto del elemento en la cuadrícula será de exactamente una columna.)
+- grid-column-end: poner numero de cuadricula; (extiende el elemento varias columnas)
+
+Si prefieres contar las líneas de la cuadrícula comenzando por la derecha, puedes dar a grid-column-start y grid-column-end valores negativos. 
+Por ejemplo, puedes establecerlos a -1 para indicar la primera línea comenzando por la derecha.
+
+En lugar de definir un elemento en la cuadrícula basado en la posicion inicial y final, 
+puedes definirlo basado en la longitud de columnas deseada usando la palabra clave span. Ten presente que span solo funciona con valores positivos.
+
+- grid-column-end: span 2;
+
+También puedes usar la palabra clave span con grid-column-start para establecer la anchura del elemento en relación a la posición final
+- grid-column-start: span 5;
+
+
+- grid-column: 2 / 4
+              Por ejemplo, grid-column: 2 / 4; establecerá el comienzo del elemento de la cuadrícula en la 2ª línea vertical de esta, y su final en la 4ª línea vertical.
+- grid-row-start: funciona de manera semejante a grid-column-start pero a lo largo del eje vertical. grid-row-start: 3;
+- grid-row: mix entre start y end (2 /4) 
+- grid-area: admite cuatro valores separados por barras oblicuas: grid-row-start, grid-column-start, grid-row-end, seguido de grid-column-end.
+              Un ejemplo de esto podría ser grid-area: 1 / 1 / 3 / 6;.
+- order: Por defecto, el valor de order de todos los elementos es igual a 0, pero puede ser establecido a cualquier valor positivo o negativo, de manera similar a z-index.
+- grid-template-columns: 50% (para coger mitad de pantalla)
+- repeat:
+          grid-template-columns: repeat(8, 12.5%); creas 8 columnas, y el % es el espacio de anchura.
+- fr (fraccion): Cada unidad fr asigna una porción del espacio disponible. 
+                  Por ejemplo, si dos elementos están establecidos a 1fr y 3fr respectivamente el espacio se divide en 4 porciones iguales; 
+                  el primer elemento ocupa 1/4 del espacio y el segundo elemento los 3/4 restantes.
+                  Ejemplo: grid-template-columns: 1fr 5fr;
+- grid-template: es una propiedad abreviada que combina grid-template-rows y grid-template-columns.
+                  Ejemplo, grid-template: 50% 50% / 200px; creará una cuadrícula con dos filas que ocuparán el 50% del alto cada una, 
+                  y una columna que será 200 píxeles de ancho.
+
